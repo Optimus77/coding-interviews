@@ -62,4 +62,9 @@ public class ￥3FindDuplicate {
         numbers[p] = numbers[q];
         numbers[q] = temp;
     }
+
+
+
+
+
 }
