@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * 两个栈实现一个队列
  */
-public class TwoStackImpQueue {
+public class $9_1TwoStackImpQueue {
 
     private LinkedList<Integer> stack1 = new LinkedList<>();
     private LinkedList<Integer> stack2 = new LinkedList<>();

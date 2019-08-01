@@ -3,6 +3,8 @@ package Chap2;
 
 import java.util.LinkedList;
 import java.util.ArrayList;
+import java.util.Queue;
+import java.util.Stack;
 
 /**
  * 输入一个链表的头节点，从尾到头打印链表每个节点的值。
@@ -36,7 +38,8 @@ public class $6FromTail2Head {
     /**
      * 利用递归，先递归到最后一个结点后开始依次返回。链表如果很长不适合用递归，递归深度将很大
      */
-    private ArrayList<Integer> a = new ArrayList<>();
+    static private ArrayList<Integer> a = new ArrayList<>();
+    static int [] arr = {1,2,3,4,5};
 
     public ArrayList<Integer> printListFromTailToHead2(ListNode listNode) {
         if (listNode != null) {
@@ -45,4 +48,18 @@ public class $6FromTail2Head {
         }
         return a;
     }
+
+    static public void recursion(ListNode listNode) {
+        if (listNode != null) {
+            recursion(listNode.next);
+            a.add(listNode.val);
+        }
+    }
+
+    public static void main(String[] args) {
+
+
+    }
+
+
 }

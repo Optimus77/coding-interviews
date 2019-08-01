@@ -6,11 +6,11 @@ import java.util.Queue;
 /**
  * 两个队列实现一个栈
  */
-public class TwoQueueImpStack {
+public class $9_2TwoQueueImpStack {
     private Queue<Integer> a;
     private Queue<Integer> another;
 
-    public TwoQueueImpStack() {
+    public $9_2TwoQueueImpStack() {
         this.a = new LinkedList<>();
         this.another = new LinkedList<>();
     }
@@ -48,7 +48,7 @@ public class TwoQueueImpStack {
 
 
     public static void main(String[] args) {
-        TwoQueueImpStack a = new TwoQueueImpStack();
+        $9_2TwoQueueImpStack a = new $9_2TwoQueueImpStack();
         a.push(54);
         a.push(55);
         a.push(56);

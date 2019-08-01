@@ -2,7 +2,7 @@ package Chap4;
 
 import java.util.ArrayList;
 
-public class FindPathInBST {
+public class FindPathInBT {
     private class TreeNode {
         int val = 0;
         TreeNode left = null;

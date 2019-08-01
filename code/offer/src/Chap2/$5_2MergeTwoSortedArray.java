@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 将有序数组B归并到有序数组A中（A能容纳下B），归并后的A数组也是有序的
  */
-public class MergeTwoSortedArray {
+public class $5_2MergeTwoSortedArray {
     public static void merge(Integer[] a, Integer[] b) {
         // 统计a数组中有值元素的个数
         int len = 0;
