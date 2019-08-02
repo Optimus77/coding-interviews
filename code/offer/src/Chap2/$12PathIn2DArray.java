@@ -10,7 +10,7 @@ package Chap2;
 
  包含一条字符串"bfce"的路径，但是矩阵中不包含"abfb"路径，因为字符串的第一个字符b占据了矩阵中的第一行第二个格子之后，路径不能再次进入该格子。
  */
-public class PathIn2DArray {
+public class $12PathIn2DArray {
     public boolean hasPath(char[] matrix, int rows, int cols, char[] str) {
         // 用于将当前路径上的访问过的点标记为“已访问”，防止同一个点访问两次
         boolean[] marked = new boolean[matrix.length];

@@ -3,7 +3,7 @@ package Chap2;
 /**
  * 现在要求输入一个整数n，请你输出斐波那契数列的第n项。
  */
-public class Fibonacci {
+public class $10_1Fibonacci {
     /**
      * 推荐迭代法
      */

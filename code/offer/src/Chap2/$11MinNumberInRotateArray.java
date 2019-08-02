@@ -5,7 +5,7 @@ package Chap2;
  * 例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。
  * NOTE：给出的所有元素都大于0，若数组大小为0，请返回0
  */
-public class MinNumberInRotateArray {
+public class $11MinNumberInRotateArray {
     /**
      * 二分查找法
      * @param array 旋转数组
