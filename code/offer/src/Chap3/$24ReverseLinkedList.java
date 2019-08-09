@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * 输入一个链表的头结点，反转链表后，并返回反转链表的头结点。
  */
-public class ReverseLinkedList {
+public class $24ReverseLinkedList {
     private class ListNode {
         int val;
         ListNode next = null;
@@ -71,4 +71,14 @@ public class ReverseLinkedList {
         head.next = null;
         return revHead;
     }
+
+    public void hy(ListNode pre,ListNode cur) {
+        if (cur.next==null) {
+            System.out.println(cur.val);
+        } else {
+            hy(cur,cur.next);
+        }
+        cur.next = pre;
+    }
+
 }
