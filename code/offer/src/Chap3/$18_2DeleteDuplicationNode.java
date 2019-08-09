@@ -6,7 +6,7 @@ package Chap3;
  * 注意重复的结点不保留：并不是将重复结点删除到只剩一个，而是重复结点的全部会被删除。所以
  * 链表1->2->3->3->4->4->5不是1->2->3->4->5
  */
-public class DeleteDuplicationNode {
+public class $18_2DeleteDuplicationNode {
 
     private class ListNode {
         int val;

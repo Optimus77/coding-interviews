@@ -3,7 +3,7 @@ package Chap3;
 /**
  * 输入数字n，按顺序打印处1到最大的n位十进制数，比如输入3，则打印1~999之间的数
  */
-public class PrintFrom1ToMaxOfNDigit {
+public class $17PrintFrom1ToMaxOfNDigit {
     public void printFrom1ToMaxOfNDigit(int n) {
         if (n <= 0) {
             return;
@@ -94,10 +94,74 @@ public class PrintFrom1ToMaxOfNDigit {
         }
     }
 
+    static int n =2;
+    static char[] c = new char[n];
+    static void print1 () {
+        for (int i=0;i<n;i++) {
+            c[i] = '0';
+        }
+
+        plus (c,n-1);
+    }
+
+    static void plus (char[] c ,int k) {
+        if (c[k] != '9') {
+            c[k] = (char) (c[k]+1);
+            print2 ();
+        } else  if (k-1>=0){
+            c[k] = '0';
+            plus (c,k-1);
+        } else {
+            return;
+        }
+    }
+
+    static void print2 () {
+
+
+    }
+
+
+
+    static void useStringBuilder () {
+        StringBuilder sb = new StringBuilder(n);
+        for (int i=0;i<n;i++) {
+            sb.append('0');
+        }
+
+        plusStringBuilder (sb,0) ;
+    }
+
+    static void plusStringBuilder (StringBuilder sb,int k) {
+        for (int i =0; i<10;i++) {
+            sb.setCharAt(k,(char)('0'+i));
+            if (k<n-1 ) {
+                plusStringBuilder(sb,k+1);
+            } else {
+                printStringBuilder(sb);
+            }
+        }
+    }
+
+    static void printStringBuilder(StringBuilder sb){
+        int subStringStart = n;
+        for (int i=0;i<n;i++) {
+            if (sb.charAt(i)!='0') {
+                subStringStart = i;
+                break;
+            }
+        }
+
+        if (subStringStart!=n)
+        System.out.print(sb.substring(subStringStart)+" ");
+    }
+
 
     public static void main(String[] args) {
-        PrintFrom1ToMaxOfNDigit a = new PrintFrom1ToMaxOfNDigit();
-        a.printFrom1ToMaxOfNDigit(2);
+        $17PrintFrom1ToMaxOfNDigit a = new $17PrintFrom1ToMaxOfNDigit();
+//        a.printFrom1ToMaxOfNDigit(2);
         a.printFrom1ToMaxOfNDigitRecur(2);
+        useStringBuilder();
+
     }
 }

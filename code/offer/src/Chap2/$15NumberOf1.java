@@ -3,7 +3,7 @@ package Chap2;
 /**
  * 输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。
  */
-public class NumberOf1 {
+public class $15NumberOf1 {
     /**
      * 减1后的值比原值相与，就是将二进制表示中最后一个1变成0
      */
@@ -65,7 +65,7 @@ public class NumberOf1 {
     }
 
     public static void main(String[] args) {
-        NumberOf1 a = new NumberOf1();
+        $15NumberOf1 a = new $15NumberOf1();
         System.out.println(a.isExponOf2(8));
         System.out.println(a.bitNumNeedsToBeChanged(10, 13));
     }
