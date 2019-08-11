@@ -3,7 +3,7 @@ package Chap3;
 /**
  * 给定单向链表的头指针和一个结点指针，定义一个函数在O(1)时间内删除该结点。假设要删除的结点确实在链表中
  */
-public class DeleteNode {
+public class $18_1DeleteNode {
 
     private class Node {
         int val;

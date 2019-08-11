@@ -4,7 +4,7 @@ package Chap3;
  * 给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。
  * 不得使用库函数直接实现，无需考虑大数问题。
  */
-public class Power {
+public class $16Power {
     /**
      * 容易想到的蹩脚办法
      *
@@ -61,10 +61,12 @@ public class Power {
         if (exponent == 1) {
             return base;
         }
-
+        if (exponent == -1) {
+            return 1.0/base;
+        }
         double result = powerUnsigned(base, exponent >> 1);
         result *= result;
-        if ((exponent & 1) == 1) {
+        if ((exponent & 0x1) == 1) {
             result *= base;
         }
         return result;
@@ -80,7 +82,7 @@ public class Power {
     }
 
     public static void main(String[] args) {
-        Power a = new Power();
-        System.out.println(a.power_2(2, -2));
+        $16Power a = new $16Power();
+        System.out.println(a.powerUnsigned(2,-1));
     }
 }

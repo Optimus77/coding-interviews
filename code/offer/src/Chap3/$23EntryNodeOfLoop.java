@@ -8,7 +8,7 @@ import java.util.HashSet;
 /**
  * 一个链表中包含环，请找出该链表的环的入口结点。
  */
-public class EntryNodeOfLoop {
+public class $23EntryNodeOfLoop {
     private class ListNode {
         int val;
         ListNode next = null;
