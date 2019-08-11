@@ -17,6 +17,33 @@ public class DeleteDuplicationNode {
         }
     }
 
+
+    public void deleteDuplication_hy(ListNode start,ListNode pre) {
+
+        if (start.next != null) {
+            if (start.next == start) {
+                if (pre!= null) {
+                    pre.next = findNext(start);
+                }
+            deleteDuplication_hy(findNext(start),pre);
+            } else {
+                pre = start;
+                deleteDuplication_hy(start.next,pre);
+            }
+        }
+
+    }
+
+    public ListNode findNext(ListNode start) {
+        if (start == start.next) {
+            findNext(start.next);
+        }
+        return start.next;
+
+    }
+
+
+
     public ListNode deleteDuplication_2(ListNode pHead) {
         if (pHead == null || pHead.next == null) {
             return pHead;
