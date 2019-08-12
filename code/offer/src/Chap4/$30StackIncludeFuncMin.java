@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * 实现栈的数据结构，包含min方法可以以O(1)的时间复杂度获得栈中的最小值
  */
-public class StackIncludeFuncMin {
+public class $30StackIncludeFuncMin {
     private LinkedList<Integer> stack = new LinkedList<>();
     // 辅助栈，用于存储当前最小值
     private LinkedList<Integer> stackMin = new LinkedList<>();
