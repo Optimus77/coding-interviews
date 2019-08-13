@@ -77,12 +77,35 @@ public class $32_3PrintTreeZ {
         return list;
     }
 
-    public void printByHy (){
+    static LinkedList<TreeNode> stack1 =new LinkedList();
+    static LinkedList<TreeNode> stack2 =new LinkedList();
 
-        LinkedList l =new LinkedList();
-        l.removeFirst();
+    public void printByHy (TreeNode root){
+        stack1.addLast(root.left);
+        stack1.addLast(root.right);
+        from1To2();
+    }
 
+    public void from1To2 () {
+        if (!stack1.isEmpty()) {
+            while (!stack1.isEmpty()) {
+                stack2.addLast(stack1.getLast().left);
+                stack2.addLast(stack1.getLast().right);
+                System.out.println(stack1.removeLast());
+            }
+            from2To1();
+        }
+    }
 
+    public void from2To1 () {
+        if (!stack2.isEmpty()) {
+            while (!stack2.isEmpty()) {
+                stack2.addLast(stack2.getLast().right);
+                stack2.addLast(stack2.getLast().left);
+                System.out.println(stack2.removeLast());
+            }
+            from1To2();
+        }
     }
 
 }
