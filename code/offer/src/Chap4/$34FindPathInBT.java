@@ -2,7 +2,10 @@ package Chap4;
 
 import java.util.ArrayList;
 
-public class FindPathInBT {
+/*
+*   输入一棵二叉树和一个整数，在二叉树中寻找一条路径，使路径上的节点的和为该整数。如果有的话，打印出这条路径的点。
+* */
+public class $34FindPathInBT {
     private class TreeNode {
         int val = 0;
         TreeNode left = null;

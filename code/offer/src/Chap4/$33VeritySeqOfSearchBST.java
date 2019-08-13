@@ -3,7 +3,7 @@ package Chap4;
 /**
  * 输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历的结果。假设输入的数组的任意两个数字都互不相同。
  */
-public class VeritySeqOfSearchBST {
+public class $33VeritySeqOfSearchBST {
     public boolean verifySquenceOfBST(int[] sequence) {
         if (sequence == null || sequence.length == 0) return false;
         return isSearchBST(sequence, 0, sequence.length - 1);

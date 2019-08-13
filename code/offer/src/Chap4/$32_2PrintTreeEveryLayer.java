@@ -6,7 +6,7 @@ import java.util.Queue;
 /**
  * 逐层打印二叉树，即打印完一层后要有换行符
  */
-public class PrintTreeEveryLayer {
+public class $32_2PrintTreeEveryLayer {
     private class TreeNode {
         int val = 0;
         TreeNode left = null;

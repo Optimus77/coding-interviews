@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * 按照Z字形打印二叉树，即先打印根结点，然后从右往左打印第二层，从左往右打印第三层...以此类推
  */
-public class PrintTreeZ {
+public class $32_3PrintTreeZ {
     private class TreeNode {
         int val = 0;
         TreeNode left = null;
@@ -75,6 +75,14 @@ public class PrintTreeZ {
             list.add(layerList);
         }
         return list;
+    }
+
+    public void printByHy (){
+
+        LinkedList l =new LinkedList();
+        l.removeFirst();
+
+
     }
 
 }
