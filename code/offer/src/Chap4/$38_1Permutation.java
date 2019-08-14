@@ -9,7 +9,7 @@ import java.util.Collections;
  * <p>
  * 通用的根据输入字符串得到全排列的程序，排序是为了保证字典序
  */
-public class Permutation {
+public class $38_1Permutation {
     public ArrayList<String> permutation(String str) {
         ArrayList<String> list = new ArrayList<>();
         if (str == null || str.length() == 0) {
@@ -46,7 +46,7 @@ public class Permutation {
     }
 
     public static void main(String[] args) {
-        Permutation a = new Permutation();
+        $38_1Permutation a = new $38_1Permutation();
         System.out.println(a.permutation("aab"));
     }
 }

@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 8X8的国际棋盘上，有8个皇后，使其不能相互攻击，即它们不能在同一行、同一列、且同一条对角
  */
-public class EightQueens {
+public class $38_4EightQueens {
     /**
      * 1、保证不同行：使用一个数组表示不同行的皇后，八个皇后则int[] queens = new int[8]，其中queens[i]表示位于第i行的皇后，这保证了皇后不位于同一行
      * 2、保证不同列：为queens[i]赋值各不相同的数值，queens[i] = j表示位于i行的皇后也位于j列，每个i赋予了不同的j值保证了不同行的皇后也不位于不同列
@@ -21,7 +21,7 @@ public class EightQueens {
         int[] queens = {0, 1, 2, 3, 4, 5, 6, 7};
         List<int[]> list = new ArrayList<>();
 
-        PermutationExt p = new PermutationExt();
+        $38_3PermutationExt p = new $38_3PermutationExt();
         List<int[]> all = p.permutation(queens);
         for (int[] arr : all) {
             if (!isLocatedSameDiagonal(arr)) list.add(arr);
@@ -44,7 +44,7 @@ public class EightQueens {
     }
 
     public static void main(String[] args) {
-        EightQueens queens = new EightQueens();
+        $38_4EightQueens queens = new $38_4EightQueens();
         List<int[]> l = queens.possibilitiesOfQueensPlaced();
         System.out.println("共有" + l.size() + "种放置方法");
         for (int[] arr : l) {

@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 通用的根据数组输入得到全排列的程序
  */
-public class PermutationExt {
+public class $38_3PermutationExt {
     /**
      * 应用排列解决问题1：输入一个含有8个数字的数组，
      * 判断有没有可能吧这8个数字分别放到正方体的8个顶点，使得正方体三对相对的面上的4个顶点的和相等
@@ -81,7 +81,7 @@ public class PermutationExt {
     }
 
     public static void main(String[] args) {
-        PermutationExt p = new PermutationExt();
+        $38_3PermutationExt p = new $38_3PermutationExt();
         int[] a = {8, 3, 5, 4, 1, 2, 5, 6};
         List<int[]> list = p.possibilitiesOfCube(a);
         System.out.println("有" + list.size() + "种可能");

@@ -3,7 +3,7 @@ package Chap4;
 /**
  * 请实现两个函数，分别用来序列化和反序列化二叉树
  */
-public class SerializeBT {
+public class $37SerializeBT {
 
     private class TreeNode {
         int val = 0;

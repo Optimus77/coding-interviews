@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * 求字符的所有排列,允许组合中有重复元素
  */
-public class Combination {
+public class $38_2Combination {
     /**
      * 其实就是求C(n, m) 其中n == str.length; m == num
      *
@@ -65,7 +65,7 @@ public class Combination {
     }
 
     public static void main(String[] args) {
-        Combination c = new Combination();
+        $38_2Combination c = new $38_2Combination();
         System.out.println(c.combination("abcca"));
         System.out.println(c.combination("abc"));
         System.out.println(c.combinationAccordingToNum("aabbc", 2));
