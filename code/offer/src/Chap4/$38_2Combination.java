@@ -3,7 +3,7 @@ package Chap4;
 import java.util.*;
 
 /**
- * 求字符的所有排列,允许组合中有重复元素
+ * 求字符的所有组合,允许组合中有重复元素
  */
 public class $38_2Combination {
     /**
