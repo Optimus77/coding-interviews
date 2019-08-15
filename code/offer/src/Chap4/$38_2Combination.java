@@ -64,10 +64,112 @@ public class $38_2Combination {
         collect(str.substring(1), sb, number, list);
     }
 
+//    public void hypre (String hy) {
+//        char[] hychar = hy.toCharArray();
+//        hy(hychar,2,0);
+//    }
+//
+//    public void hy (char[] hychar, int maxSeat , int begin){
+//        if (maxSeat==0 || maxSeat == hychar.length) {
+//            System.out.println(String.valueOf(hychar));
+//            return ;
+//        }
+//        if (begin==maxSeat) {
+//            System.out.println(String.valueOf(hychar).substring(0,maxSeat));
+//            return ;
+//        }
+//        if (maxSeat==1) {
+//            int end = hychar.length-1;
+//            for (int i =begin;i<=end;i++) {
+//                swaphy(hychar,begin,i);
+//                hy(hychar,maxSeat,begin+1);
+//                swaphy(hychar,begin,i);
+//            }
+//        } else {
+//
+//
+//
+//        }
+//
+//        int end = hychar.length-1;
+//        for (int i =begin;i<=end;i++) {
+//            swaphy(hychar,begin,i);
+//            hy(hychar,maxSeat,begin+1);
+//            swaphy(hychar,begin,i);
+//        }
+//
+//    }
+//
+//    void swaphy (char[] chars,int begin,int end) {
+//        char temp = chars[begin];
+//        chars[begin] = chars[end];
+//        chars[end] = temp;
+//    }
+
+    /*
+    *  hy 需要被操作的字符串
+    *  m 顶数
+    * */
+    public void hypre (String hy,int m) {
+        char[] hychar = hy.toCharArray();
+        StringBuilder sb =new StringBuilder(m);
+        hy(hychar,0,hychar.length-1, m,sb);
+    }
+
+    /*
+    * hychar 即将要操作的数组，
+    * n_begin 数组中需要被操作的范围的begin下标
+    * n_end 数组中需要被操作的范围的end下标
+    * m 顶数
+    * 存放结果的StringBuilder
+    * */
+    public void hy (char[] hychar , int n_begin, int n_end , int m , StringBuilder sb) {
+        System.out.println(n_begin+"  "+n_end+" "+sb );
+        if (n_end-n_begin+1 < m) {
+            return;
+        }
+        if (n_end-n_begin+1 < 1) {
+            return;
+        }
+        // C11
+        if (n_end-n_begin+1 ==1) {
+            System.out.println(sb.append(hychar[n_begin]));
+            return;
+        }
+        // Cnn
+        if (n_end-n_begin+1 ==m) {
+            System.out.println(sb.append(String.valueOf(hychar).substring(n_begin)));
+            return;
+        }
+        //Cn0
+        if (m==0) {
+            System.out.println(sb.append(String.valueOf(hychar).substring(n_begin)));
+            return;
+        }
+        //Cn1
+        if (m==1) {
+            for (int i = n_begin;i<=n_end;i++) {
+                System.out.println(sb.append(hychar[i]));
+                sb.deleteCharAt(sb.length()-1);
+            }
+        } else {
+            // 操作范围内第一个字符没有入选
+            hy(hychar,n_begin+1,n_end,m,new StringBuilder(sb));
+            // 操作范围内第一个字符入选
+            hy(hychar,n_begin+1,n_end,m-1,new StringBuilder(sb).append(hychar[n_begin]));
+        }
+
+
+    }
+
+
+
     public static void main(String[] args) {
         $38_2Combination c = new $38_2Combination();
-        System.out.println(c.combination("abcca"));
-        System.out.println(c.combination("abc"));
-        System.out.println(c.combinationAccordingToNum("aabbc", 2));
+//        System.out.println(c.combination("abcca"));
+//        System.out.println(c.combination("abc"));
+//        System.out.println(c.combinationAccordingToNum("aabbc", 2));
+        c.hypre("abcd",3);
+
     }
 }

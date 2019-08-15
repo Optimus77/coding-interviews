@@ -7,47 +7,36 @@ package Chap4;
 public class $36BSTTransToDLinkedList {
     private class TreeNode {
         int val = 0;
-        TreeNode left = null;
-        TreeNode right = null;
+        TreeNode m_pLeft = null;
+        TreeNode m_pRight = null;
 
         public TreeNode(int val) {
             this.val = val;
-
         }
-
     }
 
-    // 当前结点的前驱
-    private TreeNode preNode;
-
-    public TreeNode Convert(TreeNode pRootOfTree) {
-        if (pRootOfTree == null) {
+    TreeNode cur = null; //用于存放当前节点
+    TreeNode realHead = null; //用于存放链双向链表的首节点（即最左孩子）
+    //中序递归遍历修改链表指针即可实现
+    public TreeNode convert(TreeNode node){
+        if(node == null){
             return null;
         }
+        convert(node.m_pLeft); //左
 
-        TreeNode root = pRootOfTree;
-        // 得到双向链表
-        inOrder(root);
-        // 向左找到双向链表的头结点
-        while (root.left != null) {
-            root = root.left;
+        if(cur == null){ //根
+            cur = node;
+            realHead = node;
+        }else{
+            cur.m_pRight = node;
+            node.m_pLeft = cur;
+            cur = node;
         }
-        return root;
 
+        convert(node.m_pRight); //右
+        return realHead;
     }
 
-    // 中序遍历并改变指针
-    private void inOrder(TreeNode node) {
-        if (node == null) return;
 
-        inOrder(node.left);
 
-        node.left = preNode;
-        if (preNode != null) {
-            preNode.right = node;
-        }
-        preNode = node;
-
-        inOrder(node.right);
-    }
 }

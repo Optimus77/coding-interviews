@@ -1,7 +1,10 @@
 package Chap4;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * 输入一个字符串,按字典序打印出该字符串中字符的所有全排列。
@@ -45,8 +48,45 @@ public class $38_1Permutation {
         chars[i] = temp;
     }
 
+    public void  hybegin (String hy) {
+        List<String> l   = new ArrayList<>();
+        hy (hy.toCharArray(),0,l );
+        System.out.println(l.toString());
+    }
+
+
+    public void  hy (char[] hy, int indexbegin , List resultList) {
+        if (indexbegin== hy.length-1) {
+            System.out.println(hy);
+            resultList.add(Arrays.toString(hy));
+        }
+
+        for (int i=indexbegin;i<hy.length;i++) {
+            int swapend = i;
+            swaphy (hy,indexbegin,swapend);
+            hy(hy,indexbegin+1,resultList);
+            swaphy (hy,indexbegin,swapend);
+        }
+
+
+    }
+
+    public void swaphy (char[] hychar, int swapbegin, int swapend){
+        char temp = hychar[swapbegin];
+        hychar[swapbegin] = hychar[swapend];
+        hychar[swapend] = temp;
+    }
+
     public static void main(String[] args) {
         $38_1Permutation a = new $38_1Permutation();
-        System.out.println(a.permutation("aab"));
+//        System.out.println(a.permutation("aab"));
+        a.hybegin("abc");
+
     }
+
+
+
+
+
+
 }
