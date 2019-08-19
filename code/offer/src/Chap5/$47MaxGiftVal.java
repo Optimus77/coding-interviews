@@ -5,7 +5,7 @@ package Chap5;
  * 从棋盘的左上角开始，每次可以往右边或者下边移动一格，知道到达棋盘的右下角。
  * 给定一个棋盘和上面的礼物，计算我们最多可以拿到多少价值的礼物
  */
-public class MaxGiftVal {
+public class $47MaxGiftVal {
     /**
      * 方法一：递归，两个方向的深度优先搜索，用一个对象数组保存最大值（只需一个长度）
      */
@@ -68,7 +68,7 @@ public class MaxGiftVal {
     }
 
     public static void main(String[] args) {
-        MaxGiftVal m = new MaxGiftVal();
+        $47MaxGiftVal m = new $47MaxGiftVal();
         int[] gifts = {1, 10, 43, 23, 12, 2, 9, 6, 15, 7, 14, 1, 3, 7, 6, 5};
         System.out.println(m.getMax(gifts, 4, 4));
         System.out.println(m.getMaxVal(gifts, 4, 4));

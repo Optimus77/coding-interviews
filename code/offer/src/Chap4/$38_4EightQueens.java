@@ -44,11 +44,20 @@ public class $38_4EightQueens {
     }
 
     public static void main(String[] args) {
-        $38_4EightQueens queens = new $38_4EightQueens();
-        List<int[]> l = queens.possibilitiesOfQueensPlaced();
-        System.out.println("共有" + l.size() + "种放置方法");
-        for (int[] arr : l) {
-            System.out.println(Arrays.toString(arr));
-        }
+//        $38_4EightQueens queens = new $38_4EightQueens();
+//        List<int[]> l = queens.possibilitiesOfQueensPlaced();
+//        System.out.println("共有" + l.size() + "种放置方法");
+//        for (int[] arr : l) {
+//            System.out.println(Arrays.toString(arr));
+//        }
+        int[] arr = {0,1,2,3};
+        arr[0]  =  arr[0] ^ arr[1] ^( arr[1] = arr[0]);
+
+        System.out.println(Arrays.toString(arr));
+
+
+
+
+
     }
 }

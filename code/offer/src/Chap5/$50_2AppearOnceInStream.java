@@ -1,9 +1,9 @@
 package Chap5;
 
-public class AppearOnceInStream {
+public class $50_2AppearOnceInStream {
     private int[] count;
     private int index;
-    public AppearOnceInStream() {
+    public $50_2AppearOnceInStream() {
         count =  new int[256];
         for (int i = 0; i < count.length; i++) {
             count[i] = -1;
@@ -29,7 +29,7 @@ public class AppearOnceInStream {
     }
 
     public static void main(String[] args) {
-        AppearOnceInStream a = new AppearOnceInStream();
+        $50_2AppearOnceInStream a = new $50_2AppearOnceInStream();
         a.insert('g');
         a.insert('o');
         System.out.println(a.firstAppearOnceChar());

@@ -4,7 +4,7 @@ package Chap5;
  * 输入一个整数n，求1~n这n个整数的十进制表示中1出现的次数，
  * 例如输入12, 1~12中出现1的有1、10、11、12共5次
  */
-public class NumOf1 {
+public class $43NumOf1 {
     /**
      * 方法1，计算每个数字中1的个数，复杂度O(nlgn)
      */

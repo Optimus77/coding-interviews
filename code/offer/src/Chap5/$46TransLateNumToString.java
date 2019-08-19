@@ -14,7 +14,7 @@ import java.util.List;
  >   一个数字可能有多种翻译，比如12258有五种，分别是"bccfi", "bwfi","bczi","mcfi", "mzi".
      请实现一个函数，用来计算一个数字有多少种不同的翻译方法。
  */
-public class TransLateNumToString {
+public class $46TransLateNumToString {
     /**
      * 方法一：从左到右的递归，重复计算较多，但是可以保存编码的结果
      */
@@ -99,7 +99,7 @@ public class TransLateNumToString {
     }
 
     public static void main(String[] args) {
-        TransLateNumToString t = new TransLateNumToString();
+        $46TransLateNumToString t = new $46TransLateNumToString();
         System.out.println(t.translateNum(187534121).size());
         System.out.println(t.getTranslateCount(187534121));
     }

@@ -3,7 +3,7 @@ package Chap5;
 /**
  * 找出字符串中找出第一个只出现一次的字符，比如输入“abacceff",则输出'b'
  */
-public class FirstAppearOnceChar {
+public class $50_1FirstAppearOnceChar {
     /**
      * 返回第一个不重复字符
      */
@@ -91,7 +91,7 @@ public class FirstAppearOnceChar {
     }
 
     public static void main(String[] args) {
-        FirstAppearOnceChar f = new FirstAppearOnceChar();
+        $50_1FirstAppearOnceChar f = new $50_1FirstAppearOnceChar();
         System.out.println(f.firstAppearOnceChar("google"));
         System.out.println(f.deleteRepeating("google"));
         System.out.println(f.deleteFromAnother("google", "aeiou"));

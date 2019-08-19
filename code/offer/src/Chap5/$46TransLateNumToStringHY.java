@@ -16,7 +16,7 @@ import java.util.Map;
  >   一个数字可能有多种翻译，比如12258有五种，分别是"bccfi", "bwfi","bczi","mcfi", "mzi".
      请实现一个函数，用来计算一个数字有多少种不同的翻译方法。
  */
-public class TransLateNumToStringHY {
+public class $46TransLateNumToStringHY {
     static Map<Integer,Character> map = new HashMap();
     static List<String> res =new ArrayList<>();
 
@@ -60,7 +60,7 @@ public class TransLateNumToStringHY {
 
 
     public static void main(String[] args) {
-        TransLateNumToStringHY t =new TransLateNumToStringHY();
+        $46TransLateNumToStringHY t =new $46TransLateNumToStringHY();
         map.put(0,'a');
         map.put(1,'b');
         map.put(2,'c');

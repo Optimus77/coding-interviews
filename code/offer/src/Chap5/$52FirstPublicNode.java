@@ -7,7 +7,7 @@ import java.util.Set;
 /**
  * 输入两个链表，找出它们的第一个公共结点。由于是单链表，第一个公共结点及其后的结点都相同
  */
-public class FirstPublicNode {
+public class $52FirstPublicNode {
 
     private class ListNode {
         int val;

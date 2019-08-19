@@ -4,7 +4,7 @@ package Chap5;
  * 数字以0123456789101112131415....的格式序列化得到一个字符序列中，在这个序列中，第5位（从0开始计数）是5，第13位是1，第19位是4，等等。
  * 请写一个函数，求任意第n位对应的数字
  */
-public class ADigitInNumberSeq {
+public class $44ADigitInNumberSeq {
     /**
      * 方法1：逐个列举
      */
@@ -89,7 +89,7 @@ public class ADigitInNumberSeq {
     }
 
     public static void main(String[] args) {
-        ADigitInNumberSeq a = new ADigitInNumberSeq();
+        $44ADigitInNumberSeq a = new $44ADigitInNumberSeq();
         System.out.println(a.numAtSeq(1001));
         System.out.println(a.numAtSeq2(1001));
     }
